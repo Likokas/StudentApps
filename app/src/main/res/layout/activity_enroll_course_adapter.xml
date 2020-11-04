@@ -14,6 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="#319F9F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,6 +23,7 @@
             android:id="@+id/cons_cv_enroll_adp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#7A5F6564"
             android:paddingBottom="8dp">
 
             <ImageView
@@ -99,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="288dp"
                 android:layout_marginTop="8dp"
-                android:backgroundTint="#30B9BD"
+                android:backgroundTint="#92151513"
                 android:text="Enroll"
                 android:textColor="#FFFFFF"
                 app:layout_constraintStart_toStartOf="parent"
