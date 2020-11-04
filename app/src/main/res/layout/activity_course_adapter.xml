@@ -5,6 +5,7 @@
     android:id="@+id/cons_course_adp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#319F9F"
     android:paddingBottom="8dp"
     tools:context=".adapter.LecturerAdapter">
 
@@ -15,6 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="#500E0E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,12 +25,13 @@
             android:id="@+id/cons_cv_course_adp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#7A5F6564"
             android:paddingBottom="8dp">
 
             <ImageView
                 android:id="@+id/img_icon_lect_adp"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="82dp"
+                android:layout_height="84dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/img"
@@ -72,11 +75,11 @@
                 android:id="@+id/lbl_end_course_adp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
                 android:text="TextView"
-                app:layout_constraintStart_toEndOf="@+id/lbl_start_course_adp"
-                app:layout_constraintTop_toTopOf="@+id/guideline2" />
+                app:layout_constraintStart_toEndOf="@+id/img_icon_lect_adp"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_start_course_adp" />
 
             <TextView
                 android:id="@+id/lbl_day_course_adp"
@@ -107,22 +110,28 @@
 
             <Button
                 android:id="@+id/btn_edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="87dp"
+                android:layout_height="44dp"
                 android:layout_marginStart="164dp"
                 android:layout_marginTop="8dp"
+                android:background="#344C4C2B"
+                android:shadowColor="#30B9BD"
                 android:text="edit"
+                android:textColor="@color/white"
+                android:textColorLink="@color/colorAccent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lbl_lecturer_course_adp" />
 
             <Button
                 android:id="@+id/btn_delete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="88dp"
+                android:layout_height="43dp"
                 android:layout_marginStart="96dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="66dp"
+                android:background="#8BFF0000"
                 android:text="delete"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.736"
                 app:layout_constraintStart_toEndOf="@+id/btn_edit"
