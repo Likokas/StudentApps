@@ -8,7 +8,7 @@
         android:title="Schedule" />
     <item
         android:id="@+id/nav_courses"
-        android:icon="@drawable/ic_baseline_fingerprint_24"
+        android:icon="@drawable/ic_baseline_feedback_24"
         android:title="Courses" />
     <item
         android:id="@+id/nav_account"

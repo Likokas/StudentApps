@@ -25,7 +25,10 @@
         android:roundIcon="@drawable/ic_student__1_"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BottomNavigationActivity"></activity>
+        <activity android:name=".CourseData"></activity>
+        <activity android:name=".adapter.EnrollCourseAdapter" />
+        <activity android:name=".adapter.CourseAdapter" />
+        <activity android:name=".BottomNavigationActivity" />
         <activity android:name=".StudentData" />
         <activity android:name=".LecturerDetail" />
         <activity

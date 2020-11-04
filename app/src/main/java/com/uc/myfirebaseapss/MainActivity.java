@@ -12,6 +12,8 @@ import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     Toolbar bar;
@@ -79,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        if (FirebaseAuth.getInstance().getCurrentUser() != null){
+            Intent intent = new Intent(MainActivity.this, BottomNavigationActivity.class);
+            startActivity(intent);
+        }
     }
 
     public boolean doubleBackToExitPressedOnce = false;

@@ -5,70 +5,46 @@ import android.os.Parcelable;
 
 public class Course implements Parcelable {
 
-    private Student id;
-    private Student subject;
-    private Student day;
-    private Student start;
-    private Student end;
-    private Student lecture;
+
+    private String id,subject,day,start,end,lecturer;
 
     public Course(){
 
     }
 
-    public Course(Student id, Student subject, Student day, Student start, Student end, Student lecture) {
+    public Course(String id, String subject, String day, String start, String end, String lecturer) {
         this.id = id;
         this.subject = subject;
         this.day = day;
         this.start = start;
         this.end = end;
-        this.lecture = lecture;
+        this.lecturer = lecturer;
     }
 
-    protected Course(Parcel in) {
-        id = in.readParcelable(Student.class.getClassLoader());
-        subject = in.readParcelable(Student.class.getClassLoader());
-        day = in.readParcelable(Student.class.getClassLoader());
-        start = in.readParcelable(Student.class.getClassLoader());
-        end = in.readParcelable(Student.class.getClassLoader());
-        lecture = in.readParcelable(Student.class.getClassLoader());
-    }
-
-    public static final Creator<Course> CREATOR = new Creator<Course>() {
-        @Override
-        public Course createFromParcel(Parcel in) {
-            return new Course(in);
-        }
-
-        @Override
-        public Course[] newArray(int size) {
-            return new Course[size];
-        }
-    };
-
-    public Student getId() {
+    public String getId() {
         return id;
     }
 
-    public Student getSubject() {
+    public String getSubject() {
         return subject;
     }
 
-    public Student getDay() {
+    public String getDay() {
         return day;
     }
 
-    public Student getStart() {
+    public String getStart() {
         return start;
     }
 
-    public Student getEnd() {
+    public String getEnd() {
         return end;
     }
 
-    public Student getLecture() {
-        return lecture;
+    public String getLecturer() {
+        return lecturer;
     }
+
 
     @Override
     public int describeContents() {
@@ -77,12 +53,32 @@ public class Course implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeParcelable(id, flags);
-        dest.writeParcelable(subject, flags);
-        dest.writeParcelable(day, flags);
-        dest.writeParcelable(start, flags);
-        dest.writeParcelable(end, flags);
-        dest.writeParcelable(lecture, flags);
+        dest.writeString(this.id);
+        dest.writeString(this.subject);
+        dest.writeString(this.day);
+        dest.writeString(this.start);
+        dest.writeString(this.end);
+        dest.writeString(this.lecturer);
     }
-}
 
+    protected Course(Parcel in) {
+        this.id = in.readString();
+        this.subject = in.readString();
+        this.day = in.readString();
+        this.start = in.readString();
+        this.end = in.readString();
+        this.lecturer = in.readString();
+    }
+
+    public static final Creator<Course> CREATOR = new Creator<Course>() {
+        @Override
+        public Course createFromParcel(Parcel source) {
+            return new Course(source);
+        }
+
+        @Override
+        public Course[] newArray(int size) {
+            return new Course[size];
+        }
+    };
+}
